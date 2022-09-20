@@ -4,6 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
+        // create Menu for user to choose between them
         Console.WriteLine("Veillez choisir L'un de bossion suivants pour savoir prix de recette et coût");
         Console.WriteLine("1-Expresso");
         Console.WriteLine("2-Allengé");
@@ -14,6 +15,7 @@ class Program
         Recette recette = new Recette();
         var menu = new List<string>() { "expresso", "allongé", "allonge", "capuccino", "choclat", "thé", "the", "autre" };
         bool valid = false;
+        // loop till is valid name 
         while (!valid)
         {
             var input = Console.ReadLine().ToLower();
@@ -60,7 +62,7 @@ class Program
         }
 
 
-
+        // call function to Calculate the cost and get the end result 
         Console.WriteLine(BoissonCost.CalculCostBoission(recette));
     }
 

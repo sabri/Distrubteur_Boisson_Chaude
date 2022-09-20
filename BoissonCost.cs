@@ -68,17 +68,18 @@ namespace Distrubteur_Boision_Chaude
             }
             return $"Le prix de recette de {recette.Name} est {cost} et le prix de Vente est {costSell}";
         }
-
+        // calculate the cost of recipe
         private static double CalculByRecette(Recette rec)
         {
             double res= (CAFE_COST * rec.Cafe ?? 0) + (SUCRE_COST * rec.Sucre ?? 0) + (CREME_COST * rec.Creme ?? 0) + (THE_COST * rec.The ?? 0) + (EAU_COST * rec.Eau ?? 0) + (CHOCLAT_COST * rec.Choclat ?? 0) + (LAIT_COST * rec.Lait ?? 0);
             return res;
         }
+        //function chcks is autre 
         public static bool IsNewBoisson(List<string> menu, string input)
         {
             return menu.Any(x => x == input) && input == "autre";
         }
-
+        // function checks that input name belongs to our default names List
         public static bool IsExistInListAndValidBoisson(List<string> menu, string? input)
         {
             return input is not null && menu.Any(x => x == input) && input != "autre";
