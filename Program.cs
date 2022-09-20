@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        // create Menu for user to choose between them
+        // create Menu list for user to choose between them
         Console.WriteLine("Veillez choisir L'un de bossion suivants pour savoir prix de recette et coût");
         Console.WriteLine("1-Expresso");
         Console.WriteLine("2-Allengé");
@@ -13,7 +13,7 @@ class Program
         Console.WriteLine("5-Thé");
         Console.WriteLine("6-Autre (nouvelle recette)");
         Recette recette = new Recette();
-        var menu = new List<string>() { "expresso", "allongé", "allonge", "capuccino", "choclat", "thé", "the", "autre" };
+        var menu = new List<string>() { "expresso", "allongé", "allonge", "capuccino", "chocolat", "thé", "the", "autre" };
         bool valid = false;
         // loop till is valid name 
         while (!valid)
